@@ -196,6 +196,7 @@ a:hover, a:focus {
   font-size: 14px;
   font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
   line-height: 16px;
+  margin-top: 4px;
 }
 
 /*
@@ -205,18 +206,32 @@ a:hover, a:focus {
 .c-author {
   display: flex;
   align-items: center;
+  margin-bottom: 48px;
+}
+
+.c-author__name {
+  /* Verander de font-size en line-height van c-author__name  */
+  font-style: 16px;
+  line-height: 16px;
 }
 
 .c-author__image {
   width: 56px;
   height: 56px;
   border-radius: 100%;
+  margin-right: 16px;
   /*Avatar blijft zo altijd een cirkel*/
 }
 
 .c-author__caption {
   padding-top: 0;
   /*class selector die lager in html staat schrijft over */
+  margin-right: 16px;
+}
+
+.c-author__name, .c-author__meta {
+  /* Verwijdert margin bottom */
+  margin-bottom: 0;
 }
 
 /*
@@ -238,6 +253,7 @@ a:hover, a:focus {
   h1 {
     font-size: 58px;
     line-height: 64px;
+    margin: 0 0 24px;
   }
 }
 
