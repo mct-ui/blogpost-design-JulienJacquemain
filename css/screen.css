@@ -1,9 +1,8 @@
 /*
-  fonts
-  ---
-
-  @font-face declarations
-  */
+    fonts
+    ---
+    @font-face declarations
+*/
 
 @font-face {
   font-family: "Inter UI" font-weight: 400;
@@ -189,6 +188,37 @@ a:hover, a:focus {
   color: Crimson;
 }
 
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 58px;
+    line-height: 72px;
+  }
+}
+
 /*
     Components: type
     ---
@@ -210,6 +240,14 @@ a:hover, a:focus {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
+  @media (min-width: 992px) {
+    .c-author {
+      display: block;
+    }
+    .c-author__image {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .c-author__name {
@@ -258,6 +296,22 @@ image wel tegen de rand plakt en de rest niet net zoals in het design. */
 }
 
 /*
+    Utilities max-width
+    ---
+    Utility classes to put specific max-width onto elements.
+*/
+
+.u-max-width-sm {
+  max-width: 36em;
+}
+
+.c-article__date {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+/*
     Utilities Spacing
     ---
     Utility classes to put specific spacing value onto elements.
@@ -281,25 +335,17 @@ h1 {
   margin: 0 0 24px;
 }
 
-}
+/*
+    Media Queries --> moeten altijd vanonder, zo winnen ze altijd
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    Modify as content requires.
+*/
 
-/* Large devices (landscape tablets, desktops, 992px and up) */
-
-@media (min-width: 992px) {
-  .c-article__body {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .c-article__author {
-    width: 25%;
-    padding-right: 24px;
-  }
-  .c-article__content {
-    width: 75%;
-  }
-}
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
 
 /* Small devices (landscape phones, 576px and up) */
 
@@ -320,7 +366,21 @@ h1 {
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .c-article__body {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .c-article__author {
+    width: 25%;
+    padding-right: 24px;
+  }
+  .c-article__content {
+    width: 75%;
+  }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
