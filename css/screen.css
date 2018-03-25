@@ -65,6 +65,15 @@ body {
   margin: 0 auto;
 }
 
+div {
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -116,7 +125,7 @@ h2 {
 }
 
 *+h2 {
-  margin 48px;
+  margin-top: 48px;
   /* zal maken dat dit er dikkere margins zijn ALS er iets voor h2 staat*/
 }
 
